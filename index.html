@@ -14,21 +14,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0"
+    />
+    <script src="/js/hcb.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/random.js"></script>
 
-    <title>"So come home."</title>
+    <title>"So come home,"</title>
   </head>
 
   <body>
     <header>
       <div class="flex">
-        <h1>TITLE</h1>
+        <h1>SAID THE STARS</h1>
         <nav>
-          <span><a href="">Info</a>&emsp;&#10022;</span>
-          <span><a href="">Thoughts</a>&emsp;&#10022;</span>
-          <span><a href="">Gallery</a>&emsp;&#10022;</span>
-          <span><a href="">Submit</a></span>
+          <span><a href="#info">Info</a>&emsp;&#10022;</span>
+          <span><a href="#thoughts">Thoughts</a>&emsp;&#10022;</span>
+          <span><a href="#collections">Collections</a>&emsp;&#10022;</span>
+          <span><a href="#submit">Submit</a></span>
         </nav>
       </div>
 
@@ -151,7 +157,7 @@
             <div class="h-scroll" tabindex="0">
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Fight_2.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Fight_2.png"
                   alt=""
                   width="148"
                   height="155"
@@ -160,7 +166,7 @@
               </figure>
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Um_2.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Um_2.png"
                   alt=""
                   width="148"
                   height="155"
@@ -169,7 +175,7 @@
               </figure>
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Hide_6.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Hide_6.png"
                   alt=""
                   width="148"
                   height="155"
@@ -178,7 +184,7 @@
               </figure>
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Horrified_2.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Horrified_2.png"
                   alt=""
                   width="148"
                   height="155"
@@ -187,7 +193,7 @@
               </figure>
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Busted_2.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Busted_2.png"
                   alt=""
                   width="148"
                   height="155"
@@ -196,7 +202,7 @@
               </figure>
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Scary_3.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Scary_3.png"
                   alt=""
                   width="148"
                   height="155"
@@ -205,7 +211,7 @@
               </figure>
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Embarrassed.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Embarrassed.png"
                   alt=""
                   width="148"
                   height="155"
@@ -214,7 +220,7 @@
               </figure>
               <figure>
                 <img
-                  src="img/portraits/ISAT_Portrait_Siffrin_Surprised_2.png"
+                  src="assets/img/portraits/ISAT_Portrait_Siffrin_Surprised_2.png"
                   alt=""
                   width="148"
                   height="155"
@@ -232,15 +238,30 @@
       </nav>
 
       <div class="stars flex-col">
-        <img src="img/shapes/star_4pt.png" alt="" height="48" width="48" />
-        <img src="img/shapes/star_4pt.png" alt="" height="48" width="48" />
-        <img src="img/shapes/star_4pt.png" alt="" height="48" width="48" />
+        <img
+          src="assets/img/shapes/star_4pt.png"
+          alt=""
+          height="48"
+          width="48"
+        />
+        <img
+          src="assets/img/shapes/star_4pt.png"
+          alt=""
+          height="48"
+          width="48"
+        />
+        <img
+          src="assets/img/shapes/star_4pt.png"
+          alt=""
+          height="48"
+          width="48"
+        />
       </div>
 
       <section id="collections">
         <h2>Collections</h2>
         <nav class="tab">
-          <button class="tablinks" onclick="openTab(event, 'gallery')">
+          <button class="tablinks active" onclick="openTab(event, 'gallery')">
             Gallery
           </button>
           <button class="tablinks" onclick="openTab(event, 'songs')">
@@ -253,43 +274,44 @@
             Saved
           </button>
         </nav>
-        <hr />
-        <article id="gallery" class="tab-content">
-          <h3>gallery</h3>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, pariatur
-            repudiandae! Eum, praesentium. Iure ipsum aperiam nemo magnam
-            asperiores quaerat vitae tenetur perspiciatis, qui praesentium neque
-            totam cum aut accusamus?
-          </div>
-        </article>
-        <article id="songs" class="tab-content">
-          <h3>Songs</h3>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            molestiae repellat, facilis vitae laborum dolore velit voluptate,
-            perspiciatis illum et maxime asperiores! Reprehenderit fugiat
-            doloremque exercitationem magni similique error. Minima!
-          </div>
-        </article>
-        <article id="textposts" class="tab-content">
-          <h3>Textposts</h3>
-          <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repellendus facilis ratione culpa nemo soluta quae quos, nostrum
-            impedit ab, numquam quia, officia suscipit eaque perferendis?
-            Placeat tenetur id corporis reiciendis.
-          </div>
-        </article>
-        <article id="saved" class="tab-content">
-          <h3>Saved</h3>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            ea vero impedit autem, laborum saepe perferendis odio eligendi
-            quisquam cum unde laudantium quam iste est voluptas porro quod qui
-            natus?
-          </div>
-        </article>
+        <div class="tabs-container">
+          <article id="gallery" class="tab-content">
+            <h3>gallery</h3>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+              pariatur repudiandae! Eum, praesentium. Iure ipsum aperiam nemo
+              magnam asperiores quaerat vitae tenetur perspiciatis, qui
+              praesentium neque totam cum aut accusamus?
+            </div>
+          </article>
+          <article id="songs" class="tab-content">
+            <h3>Songs</h3>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur molestiae repellat, facilis vitae laborum dolore velit
+              voluptate, perspiciatis illum et maxime asperiores! Reprehenderit
+              fugiat doloremque exercitationem magni similique error. Minima!
+            </div>
+          </article>
+          <article id="textposts" class="tab-content">
+            <h3>Textposts</h3>
+            <div>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus facilis ratione culpa nemo soluta quae quos, nostrum
+              impedit ab, numquam quia, officia suscipit eaque perferendis?
+              Placeat tenetur id corporis reiciendis.
+            </div>
+          </article>
+          <article id="saved" class="tab-content">
+            <h3>Saved</h3>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis ea vero impedit autem, laborum saepe perferendis odio
+              eligendi quisquam cum unde laudantium quam iste est voluptas porro
+              quod qui natus?
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="thoughts">
@@ -335,14 +357,11 @@
               would exist a Sadness. It's not enough to call a plothole, but it
               might have been interesting to delve a little more into the
               party's feelings about having to fight them. <br /><br />
-            </p>
-            <hr />
-            <p>
               <br />
-              (Not to mention Mal du Pays, who is immune to all attacks,
-              demonstrates cognizance by only targeting Siffrin, is still at
-              large, and throws a wrench into what actually defines a Sadness,
-              but I digress)
+              <br />
+              (Not to mention Mal du Pays, who is immune to all attacks, chooses
+              to attack only Siffrin, is still at large, and throws a wrench
+              into what actually defines a Sadness, but I digress)
             </p>
           </article>
         </div>
@@ -363,13 +382,15 @@
           <aside>
             <h3>poll</h3>
           </aside>
-          <div>
-            <h3>comments</h3>
-          </div>
         </div>
-        <!-- drawbox -->
-        <div></div>
       </section>
+      <!-- begin wwww.htmlcommentbox.com -->
+      <div id="HCB_comment_box">
+        <a href="http://www.htmlcommentbox.com">Widget</a> is loading
+        comments...
+      </div>
+      <!-- end www.htmlcommentbox.com -->
+
       <aside class="corner">
         <h4></h4>
       </aside>
