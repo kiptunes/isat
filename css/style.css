@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: VCR_OSD;
-  src: url(/assets/fonts/VCR_OSD_MONO.ttf);
+  src: url("../assets/fonts/VCR_OSD_MONO.ttf");
 }
 
 html *,
