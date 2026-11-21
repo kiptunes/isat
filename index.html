@@ -75,7 +75,15 @@
         </div>
         <div class="column flex-col">
           <aside>
-            <img src="" alt="" height="210" width="210" />
+            <div class="img-crop">
+              <img
+                src="assets/img/art/the_beginning.png"
+                alt=""
+                width="240"
+                height="200"
+              />
+            </div>
+
             <table>
               <tr>
                 <th>Craft Type</th>
@@ -244,14 +252,16 @@
         <a href="https://instarsandtime.wiki.gg/">Wiki</a>
       </nav>
 
-      <div class="stars flex-col">
-        <img src="assets/img/shapes/star_4pt.png" height="48" width="48" />
-        <img src="assets/img/shapes/star_4pt.png" height="48" width="48" />
-        <img src="assets/img/shapes/star_4pt.png" height="48" width="48" />
-      </div>
-
       <section id="collections">
+        <div class="stars flex divider">
+          <img src="assets/img/shapes/star_4pt.png" />
+          <img src="assets/img/shapes/star_4pt.png" />
+          <img src="assets/img/shapes/star_4pt.png" />
+          <img src="assets/img/shapes/star_4pt.png" />
+          <img src="assets/img/shapes/star_4pt.png" />
+        </div>
         <h2>Collections</h2>
+
         <nav class="tab">
           <button class="tablinks active" onclick="openTab(event, 'gallery')">
             Gallery
@@ -267,23 +277,303 @@
           <article id="gallery" class="tab-content">
             <h3>Gallery</h3>
             <hr />
+            <nav class="center">
+              <label
+                class="gallery-label active"
+                onclick="showSection(event, 'all')"
+              >
+                <input type="radio" name="gallery" value="" checked />
+                <span> All</span>
+              </label>
+              <span>/</span>
+              <label
+                class="gallery-label"
+                onclick="showSection(event, 'battle')"
+              >
+                <input type="radio" name="gallery" value="" />
+                <span> Battle</span>
+              </label>
+              <span>/</span>
+              <label
+                class="gallery-label"
+                onclick="showSection(event, 'panels')"
+              >
+                <input type="radio" name="gallery" value="" />
+                <span> Panels</span>
+              </label>
+              <span>/</span>
+              <label class="gallery-label" onclick="showSection(event, 'id5')">
+                <input type="radio" name="gallery" value="" />
+                <span> id5</span>
+              </label>
+              <span>/</span>
+              <!-- <label class="gallery-label" onclick="showSection(event, 'misc')">
+                <input type="radio" name="gallery" value="" />
+                <span> Misc</span>
+              </label> -->
+            </nav>
             <div tabindex="0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
-              pariatur repudiandae! Eum, praesentium. Iure ipsum aperiam nemo
-              magnam asperiores quaerat vitae tenetur perspiciatis, qui
-              praesentium neque totam cum aut accusamus?
+              <hgroup class="gallery-content" id="gallery-battle">
+                <p>
+                  [Note that this isn't a complete collection -- just my
+                  favorites!]
+                </p>
+                <h4>Battle</h4>
+                <div class="img-wrapper">
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_Attack.png"
+                      alt=""
+                    />
+                    <figcaption>Attack - Act 1</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_Attack_ACT3.png"
+                      alt=""
+                    />
+                    <figcaption>Attack - Act 3</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_Attack_ACT5.png"
+                      alt=""
+                    />
+                    <figcaption>Attack - Act 5</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_Attack_ACT6.png"
+                      alt=""
+                    />
+                    <figcaption>Attack - Act 6</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_Frightened_Attack.png"
+                      alt=""
+                    />
+                    <figcaption>Attack - MDP</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_Frightened_LowHP.png"
+                      alt=""
+                    />
+                    <figcaption>Low HP: MDP</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_Timefreeze_ACT3.png"
+                      alt=""
+                    />
+                    <figcaption>Timefreeze</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="assets/img/battle/ISAT_Battle_Siffrin_VS_Friends.png"
+                      alt=""
+                    />
+                    <figcaption>VS Friends</figcaption>
+                  </figure>
+                </div>
+              </hgroup>
+              <hgroup class="gallery-content" id="gallery-panels">
+                <h4>Panels</h4>
+                <div class="img-wrapper">
+                  <figure class="flex">
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT5_Mirror_Pic.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT2_Mirror_Pic_2.png"
+                      alt=""
+                    />
+                  </figure>
+                  <img
+                    src="assets/img/panels/ISAT_Event_ACT1_House_Death_2.png"
+                    alt=""
+                  />
+                  <figure class="flex">
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT3_Friendquest_Bonnie_2b.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT6_Final_Friend_Convos_Bonnie.png"
+                      alt=""
+                    />
+                  </figure>
+                  <figure class="flex">
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT2_King_Victory_1.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT4_King_Victory_1.png"
+                      alt=""
+                    />
+                  </figure>
+                  <img
+                    src="assets/img/panels/ISAT_Event_ACT1_Open_Door_4_A.png"
+                    alt=""
+                  />
+                  <figure class="flex">
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT3_Loopquest_Hangout_1.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT3_Friendquest_Isabeau_2.png"
+                      alt=""
+                    />
+                  </figure>
+
+                  <figure class="flex">
+                    <div>
+                      <img
+                        src="assets/img/panels/ISAT_Event_ACT1_House_Death_1.png"
+                        alt=""
+                      />
+                      <img
+                        src="assets/img/panels/ISAT_Event_ACT3_Special_Loop_Kill_Kill_2.png"
+                        alt=""
+                      />
+                      <img
+                        src="assets/img/panels/ISAT_Event_ACT3_Special_Loop_Bonnie_1.png"
+                        alt=""
+                      />
+                    </div>
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT5_Final_Battle_Still.png"
+                      alt=""
+                    />
+                  </figure>
+
+                  <figure class="flex">
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT4_Loopquest_Ending_1.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT4_Loopquest_Ending_4.png"
+                      alt=""
+                    />
+                  </figure>
+                  <img
+                    src="assets/img/panels/ISAT_Event_ACT4_Loopquest_Ending_5.png"
+                    alt=""
+                  />
+                  <figure class="flex">
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT5_Falling_Reso_6.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/panels/ISAT_Event_ACT6_Loop_Battle_2.png"
+                      alt=""
+                    />
+                  </figure>
+                  <img
+                    src="assets/img/panels/ISAT_Event_ACT1_Change_God_14.png"
+                    alt=""
+                  />
+                </div>
+              </hgroup>
+              <hgroup class="gallery-content" id="gallery-id5">
+                <h4>By insertdisc5</h4>
+                <div class="img-wrapper">
+                  <div class="flex">
+                    <img src="assets/img/id5/units.png" alt="" />
+                    <img src="assets/img/id5/ace.png" alt="" />
+                  </div>
+                  <img src="assets/img/id5/catch_me.png" alt="" />
+                  <div class="flex">
+                    <img src="assets/img/id5/ah_1.png" alt="" />
+                    <img src="assets/img/id5/ah_2.png" alt="" />
+                  </div>
+                  <img src="assets/img/id5/forgot_birthday.png" alt="" />
+                  <div class="flex">
+                    <img src="assets/img/id5/whos_that_pkmn.png" alt="" />
+                    <img src="assets/img/id5/its_mdp.png" alt="" />
+                  </div>
+                  <img src="assets/img/id5/nothing_happens.png" alt="" />
+                  <div class="grid-3">
+                    <img src="assets/img/id5/real_timeloop.png" alt="" />
+                    <img src="assets/img/id5/sloop.png" alt="" />
+                    <img src="assets/img/id5/snug_cozy.png" alt="" />
+                    <img src="assets/img/id5/stargazers.png" alt="" />
+                  </div>
+
+                  <!-- <img src="assets/img/id5/time_loop_0.png" alt="" /> -->
+                  <img src="assets/img/id5/time_loop_1.png" alt="" />
+                  <img src="assets/img/id5/time_loop_2.png" alt="" />
+
+                  <img src="assets/img/id5/sif_sculpt.jpg" alt="" />
+                  <img src="assets/img/id5/you_want_mailing_list.png" alt="" />
+                </div>
+              </hgroup>
+              <!-- <hgroup class="gallery-content" id="gallery-misc">
+                <h4>Misc</h4>
+                <div class="img-wrapper"></div>
+              </hgroup> -->
             </div>
           </article>
+
           <article id="songs" class="tab-content">
             <h3>Songs</h3>
             <hr />
-            <div tabindex="0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur molestiae repellat, facilis vitae laborum dolore velit
-              voluptate, perspiciatis illum et maxime asperiores! Reprehenderit
-              fugiat doloremque exercitationem magni similique error. Minima!
+            <div class="flex" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Song Name</th>
+                    <th>Artist</th>
+                    <th><a href=""></a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <aside class="flex-col">
+                <img src="" alt="" />
+                <table></table>
+              </aside>
             </div>
           </article>
+
           <article id="textposts" class="tab-content">
             <h3>Textposts</h3>
             <hr />
@@ -296,7 +586,12 @@
         <h2>Thoughts</h2>
         <div class="flex">
           <article>
-            <img src="" alt="" height="48" width="48" />
+            <img
+              src="assets/img/art/BourdonOverworld.gif"
+              alt=""
+              height="80"
+              width="120"
+            />
             <h3>The forgotten country</h3>
             <hr />
             <p tabindex="0">
@@ -336,7 +631,12 @@
             </p>
           </article>
           <article>
-            <img src="" alt="" height="48" width="48" />
+            <img
+              src="assets/img/art/NostalgieOverworldFlipped.gif"
+              alt=""
+              height="80"
+              width="48"
+            />
             <h3>Sadnesses</h3>
             <hr />
             <p tabindex="0">
@@ -383,14 +683,6 @@
         </div>
       </section>
 
-      <section id="submit">
-        <h2>Submit</h2>
-        <div class="flex">
-          <aside>
-            <h3>poll</h3>
-          </aside>
-        </div>
-      </section>
       <!-- begin wwww.htmlcommentbox.com -->
       <div id="HCB_comment_box">
         <a href="http://www.htmlcommentbox.com">Widget</a> is loading

@@ -1,6 +1,6 @@
 // Path to your manifest file  
-const textpostPath = '/assets/img/screenshots/posts/'
-const manifestPath = '/assets/manifest/textposts.json';  
+const textpostPath = "assets/img/screenshots/posts/"
+const manifestPath = "assets/manifest/textposts.json";  
  
 // Fetch the manifest file  
 fetch(manifestPath)  

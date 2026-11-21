@@ -18,7 +18,8 @@ body * {
 
 html {
   font-family: monospace;
-  background-color: black;
+  font-size: 14px;
+  background: black url("../assets/img/shapes/bitmap.png") repeat;
   overflow-x: clip;
 }
 
@@ -37,6 +38,7 @@ p,
 h1,
 h2,
 h3,
+h4,
 h5,
 button {
   color: var(--off-white);
@@ -45,11 +47,20 @@ button {
 a:hover {
   color: var(--broken-red);
 }
+a,
 p,
 td,
 th,
 figcaption {
-  font-size: smaller;
+  font-size: 1em;
+}
+blockquote,
+h5 {
+  font-size: 1.2em;
+}
+h1 {
+  font-size: 2em;
+  padding-bottom: var(--box-pad);
 }
 button {
   border: none;
@@ -103,7 +114,8 @@ header {
   }
 }
 main {
-  border: 2px solid var(--off-white);
+  background-color: rgb(0, 0, 0, 0.8);
+  border: 2px solid rgba(221, 220, 216, 0.5);
   border-width: 0 2px;
   padding: var(--med-spc);
   @media only screen and (max-width: 768px) {
@@ -176,7 +188,7 @@ nav.outgoing {
   aside,
   hgroup {
     background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
     border: 2px solid var(--off-white);
     box-shadow:
       4px 4px rgba(255, 255, 255, 0.5),
@@ -250,6 +262,11 @@ nav.outgoing {
       align-self: end;
       width: 60px;
     }
+    img {
+      object-position: 50%;
+      object-fit: cover;
+      border: 1px dotted var(--off-white);
+    }
   }
   .column:last-child {
     flex: 1;
@@ -300,18 +317,27 @@ nav.outgoing {
 /*      COLLECTIONS      */
 /* --------------------- */
 #collections {
+  position: relative;
   h2 {
-    padding: var(--med-spc);
+    margin: 5rem 0 -1rem;
   }
   h3 {
     padding: var(--med-spc);
+    background-color: black;
+  }
+  .stars {
+    margin: var(--med-spc) 0;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: -4rem;
+    left: 50%;
   }
   nav.tab {
     text-align: right;
   }
   .tabs-container {
     z-index: 0;
-    background-color: black;
     margin-top: -2px;
     border: 2px solid var(--off-white);
   }
@@ -320,7 +346,7 @@ nav.outgoing {
     border-radius: 8px 8px 0 0;
     border-bottom-width: 0;
     width: 90px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1);
     color: white;
     margin-bottom: calc(var(--box-pad) * -1);
     padding: 2px var(--box-pad);
@@ -338,6 +364,8 @@ nav.outgoing {
     color: var(--broken-red);
   }
   .tab-content {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
     display: none;
     animation: fadeEffect 1s;
     > div {
@@ -347,11 +375,62 @@ nav.outgoing {
   }
   #gallery {
     display: block;
+    > nav {
+      top: 0;
+      position: sticky;
+    }
+    hgroup {
+      padding: var(--med-spc);
+      min-height: 200px;
+      overflow-x: clip;
+    }
+    figure {
+      display: inline-block;
+    }
+    img {
+      width: 90%;
+      margin: var(--box-pad) auto;
+      object-fit: contain;
+      height: auto;
+    }
+    .flex {
+      display: flex;
+      > img {
+        min-width: 50%;
+      }
+      > div img {
+        width: 100%;
+      }
+    }
+    nav {
+      padding: 8px;
+    }
+    label span {
+      width: 100%;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    label.active span {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    [type="radio"] {
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  .grid-3 {
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-template-columns: auto auto auto;
   }
   #img-wrapper {
+    width: 100%;
     img {
-      display: block;
-      width: 70%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--off-white);
       margin: var(--med-spc) auto;
     }
   }
@@ -361,6 +440,7 @@ nav.outgoing {
 /*      THOUGHTS      */
 /* ------------------ */
 #thoughts {
+  position: relative;
   h2 {
     margin-bottom: var(--med-spc);
   }
@@ -370,7 +450,7 @@ nav.outgoing {
   article {
     flex: 1;
     p {
-      max-height: 320px;
+      max-height: 240px;
       overflow: scroll;
     }
   }
@@ -381,7 +461,9 @@ nav.outgoing {
   .circles-container {
     --diameter: 540px;
     --btwn-rings: 32px;
-    transform: translate(calc(100%), calc(var(--diameter) / -2));
+    position: absolute;
+    bottom: calc(-1 * var(--diameter) / 2);
+    right: calc(-1 * var(--diameter) / 2);
     .inner-circle {
       padding: var(--btwn-rings);
     }
@@ -406,7 +488,6 @@ nav.outgoing {
 /* ---------------- */
 /*      SUBMIT      */
 /* ---------------- */
-
 #submit {
   border: 1px solid var(--off-white);
 }
@@ -437,13 +518,32 @@ nav.outgoing {
   font-family: VCR_OSD;
   border-radius: 0;
   padding: var(--box-pad);
-  margin: calc(var(--box-pad) / 2);
 }
-#HCB_comment_box {
-  display: flex;
-}
-#HCB_comment_box #comments_list {
+#no_comments,
+.admin-link {
   display: none;
+}
+#hcb_form {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: repeat(3 1fr);
+  #hcb_form_name,
+  #hcb_form_website {
+    width: 100%;
+    margin: 0;
+  }
+  .hcb-wrapper {
+    grid-column: 1 / span 3;
+  }
+  div:has(.btn) {
+    grid-column: 1 / span 3;
+    text-align: right;
+    padding: 0;
+    #hcb_submit {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 /* ---------------- */
@@ -479,14 +579,16 @@ nav.outgoing {
   border-radius: 50%;
   box-sizing: border-box;
 }
-.stars.flex-col {
+.stars.flex {
   opacity: 0.8;
-  position: absolute;
-  row-gap: 0;
-  transform: translate(-50%, -50%);
+  column-gap: 0;
   img {
-    margin-top: -4px;
+    margin-right: -4px;
   }
+}
+.stars.divider {
+  width: 100%;
+  justify-content: center;
 }
 
 /* ------------------- */

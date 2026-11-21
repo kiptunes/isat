@@ -1,0 +1,50 @@
+{
+  "textposts": [
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    },
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    }
+  ],
+  "battle": [
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    },
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    }
+  ],
+  "id5": [
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    },
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    }
+  ],
+  "miscj": [
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    },
+    {
+      "src": "name",
+      "alt": "alt",
+      "title": "title"
+    }
+  ]
+}

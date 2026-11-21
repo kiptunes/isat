@@ -19,3 +19,23 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 } 
+
+function showSection(evt, section) {
+
+  var gallery_content = document.getElementsByClassName("gallery-content");
+  for (var i = 0; i < gallery_content.length; i++) {
+   if (section == "all") {
+    gallery_content[i].style.display = "block";
+   } else {
+    gallery_content[i].style.display = "none";
+   }
+  }
+
+  buttons = document.getElementsByClassName("gallery-label");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].className = buttons[i].className.replace(" active", "");
+  }
+
+  evt.currentTarget.className += " active";
+  document.getElementById("gallery-" + section).style.display = "block";
+}
