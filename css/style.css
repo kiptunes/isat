@@ -339,6 +339,7 @@ nav.outgoing {
   .tabs-container {
     z-index: 0;
     margin-top: -2px;
+    overflow-y: clip;
     border: 2px solid var(--off-white);
   }
   button.tablinks {
@@ -373,6 +374,10 @@ nav.outgoing {
       overflow: scroll;
     }
   }
+  p {
+    text-align: center;
+    margin: 16px;
+  }
   #gallery {
     display: block;
     > nav {
@@ -383,6 +388,11 @@ nav.outgoing {
       padding: var(--med-spc);
       min-height: 200px;
       overflow-x: clip;
+      h4 {
+        background-color: rgba(221, 220, 216, 0.5);
+        padding: var(--box-pad);
+        color: black;
+      }
     }
     figure {
       display: inline-block;
@@ -432,6 +442,16 @@ nav.outgoing {
       height: auto;
       border: 1px solid var(--off-white);
       margin: var(--med-spc) auto;
+    }
+  }
+  #songs {
+    table {
+      border-spacing: 0;
+      width: 100%;
+      margin: var(--box-pad);
+    }
+    th {
+      border-bottom: solid var(--off-white) 1px;
     }
   }
 }
